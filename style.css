@@ -1,0 +1,119 @@
+.Map {
+    position: relative;
+    width: 1104px;
+    height: 661px;
+    background-image: url('MapofVeneto.PNG');
+    background-size:100% 100%;
+    margin-top:20px;
+    margin-left:50px;
+    margin-right:30px;
+    margin-bottom:30px;
+}
+
+.header{
+    width:100%;
+    height:40px;
+    margin-bottom:20px;
+    text-align:center;
+    padding: 30px 0px;
+    background-color: aliceblue;
+}
+
+.footer{
+    background-color:aliceblue;
+    width:100%;
+    color:pink;
+    display:inline-block;
+    text-align:right;
+}
+
+.maintitle{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:230%;
+    color:pink;
+}
+
+.title{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:100%;
+    color: black; 
+    text-align: center;
+}
+
+.Map .markerVerona{
+    position:absolute;
+    background-image: url(icons8-colosseum-64.png);
+    top:52%;
+    left:23%;
+    width:50px;
+    height:50px;
+}
+
+.Map .markerVenice{
+    position:absolute;
+    background-image: url(icons8-gondola-50.png);
+    top:51%;
+    left:62%;
+    width:50px;
+    height:50px;
+}
+
+.Map .markerTrento{
+    position:absolute;
+    background-image: url(icons8-ski-50.png);
+    top:6%;
+    left:26%;
+    width:50px;
+    height:50px;
+}
+
+.Map .markerGrappa{
+    position:absolute;
+    background-image: url(icons8-grapes-50.png);
+    width:50px;
+    height:50px;
+    top:25%;
+    left:45%;
+}
+
+.Map .square{
+    position:absolute;
+    border: 5px solid;
+    border-color:pink;
+    width:100px;
+    height:65px;
+    top:51%;
+    left:50%;
+    box-sizing:border-box;
+    z-index: 1;
+    background-color:transparent;
+}
+
+#sources{
+    text-align:center;
+    margin-left:40%;
+    margin-bottom:20px;
+}
+
+.container{
+    border:3px solid;
+    border-color:pink;
+    background-color:transparent;
+    width:255px;
+    height:200px;
+    padding: 10px 0px;
+}
+
+.ul li{
+    list-style:circle;
+}
+
+#leaflet{
+    width:1104px;
+    height:661px;
+    margin-top:20px;
+    margin-left:50px;
+    margin-right:30px;
+    margin-bottom:30px;
+}
+

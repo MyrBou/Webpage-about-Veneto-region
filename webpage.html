@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Veneto region</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="http://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+        <script src="http://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="maintitle">
+                <b><e>VENETO REGION</e></b>
+            </div>
+        </div>
+        <section id="first map">
+            <div class="title">
+                <b><i><u>The beautiful cities to visit near Padova!</u></i></b>
+            </div>
+            <div class='Map'> 
+                <div class="markerVerona">
+                </div>
+                <div class="markerVenice">
+                </div>
+                <div class="markerTrento">
+                </div>
+                <div class="markerGrappa">
+                </div>
+                <div class="square">
+                </div>
+            </div>
+        </section>
+        <div class="title">
+            <b><i><u>Must places for your Padova bucket list!</u></i></b>
+        </div>
+        <div id="leaflet">
+        </div> 
+        <section id="sources">
+            <div class="container">
+                <p><u>Sources</u></p>
+                <ul>
+                    <li><i>Basemap</i> for 1st map from: ArcGIS Pro basemap gallery</li>
+                    <li><i>Icons</i> used as markers in both maps from: https://icons8.com/</li>
+                    <li><i>Leaflet</i> from: https://leaflet-extras.github.io/leaflet-providers/preview/ </li>
+                </ul>
+            </div>
+        </section>
+
+        <script>
+
+            let leaflet = L.map('leaflet').setView([45.40, 11.90], 13);
+            
+            let layer = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+	            maxZoom: 20,
+	            attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'});
+            layer.addTo(leaflet);
+
+            let icon1 = L.icon({
+            iconUrl: 'icons8-location-64.png',
+            iconSize: [32, 37],
+            iconAnchor: [16, 37]
+            });
+            let pos1 = [45.398331764, 11.875983178];
+            let marker1 = L.marker(pos1, {
+            title: "Prato della Valle",
+            icon: icon1
+            });
+            marker1.addTo(leaflet);
+            marker1.bindPopup('This is the Prato della Valle!').closePopup();
+
+            let icon2 = L.icon({
+            iconUrl: 'icons8-location-64.png',
+            iconSize: [32, 37],
+            iconAnchor: [16, 37]
+            });
+            let pos2 = [45.411667, 11.879128];
+            let marker2 = L.marker(pos2, {
+            title: "Giardini della Arena",
+            icon: icon2
+            });
+            marker2.addTo(leaflet);
+            marker2.bindPopup('This is the Giardini della Arena!').closePopup();
+
+            let icon3 = L.icon({
+            iconUrl: 'icons8-location-64.png',
+            iconSize: [32, 37],
+            iconAnchor: [16, 37]
+            });
+            let pos3 = [45.40757, 11.87711];
+            let marker3 = L.marker(pos3, {
+            title: "Caffe Peddrochi",
+            icon: icon3
+            });
+            marker3.addTo(leaflet);
+            marker3.bindPopup('This is the Cafe Peddrochi!').closePopup();
+
+            let bounds = [[45.390, 11.860], [45.420, 11.899]];
+            let rect = L.rectangle(bounds, {
+            color: "#FFC0CB",
+            fill: false,
+            weight: 5
+            });
+            rect.addTo(leaflet);
+            rect.bindPopup('The center of Padova!').closePopup();
+
+
+        </script> 
+        <div class="footer">
+            <p>Myrto Panagiota Bouloukou</p>
+            <p>Created for Web Mapping course, Summer Semester 2022</p>
+        </div>  
+    </body>
+</html>
